@@ -1,18 +1,22 @@
-// console.log("Hello World");
+const accountId = 16453
+let accountEmail = "xyz@google.com"
+var accountPassword = "12345"
+accountCity = "Banglore"
+let accountState;
 
-// console.table(["Hello","Hi","bye bye","howdy","people"]) //prints in tabular form
+// accountId = 2 // not allowed
 
-// let a = 5;
-// let b = 10;
 
-// // a = 15;
-// let c = (a+b);
-// console.log(c);
+accountEmail = "abc@abc.com"
+accountPassword = "265121"
+accountCity = "Hyderabad"
 
-let a = 15;
-let b = "hello";
-let c = true;
-let d = null;
-let e;
-console.log(typeof a, typeof b, typeof c, typeof d, typeof e);
-console.log(typeof (a,b,c,d,e));
+console.log(accountId);
+
+/*
+Prefer not to use var
+because of issue in block scope and functional scope
+*/
+
+
+console.table([accountId, accountEmail, accountPassword, accountCity, accountState])
