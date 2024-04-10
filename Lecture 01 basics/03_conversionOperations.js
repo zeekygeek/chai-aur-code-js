@@ -1,0 +1,1 @@
+console.log("This is the 3rd topic of Lecture 1");
