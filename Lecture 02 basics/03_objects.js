@@ -7,19 +7,15 @@ const JsUser = {
     lastLoginDays: ['Monday','Tuesday','Friday'],
     // [mySymbol]: symbol
 }
-
-console.log(JsUser.lastLoginDays)
-console.log(JsUser.age)
-
+// console.log(JsUser.lastLoginDays)
+// console.log(JsUser.age)
 
 // console.log(JsUser["last name"]);
 
-console.log(JsUser.email)
+// console.log(JsUser.email)
 //or
-console.log(JsUser["email"])
-console.log(typeof JsUser['mySymbol'])
+// console.log(JsUser["email"])
+// console.log(typeof JsUser['mySymbol'])
+// Object.freeze(JsUser.age)
 
-Object.freeze(JsUser)
-JsUser.age = 32;
 
-console.log(JsUser.age)
