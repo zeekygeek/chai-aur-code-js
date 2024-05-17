@@ -18,3 +18,8 @@ console.log(JsUser.email)
 //or
 console.log(JsUser["email"])
 console.log(typeof JsUser['mySymbol'])
+
+Object.freeze(JsUser)
+JsUser.age = 32;
+
+console.log(JsUser.age)
