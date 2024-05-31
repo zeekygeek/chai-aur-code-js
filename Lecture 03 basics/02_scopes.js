@@ -5,6 +5,24 @@ if(true){
     var b = 44
     const c = 554
 }
-console.log(a)
-console.log(b)
-console.log(c)
+// console.log(a)
+// console.log(b)
+// console.log(c)
+
+
+
+// ------------------ NESTED SCOPING -------------------------------------
+function one(){
+    const username = "abhijit"
+
+    function two(){
+        const website = "youtube"
+        console.log(username)
+    }
+
+    // console.log(website)
+    two()
+
+}
+
+one()
