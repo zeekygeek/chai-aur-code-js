@@ -9,4 +9,3 @@
 // finalname = resultName(tryObj)
 
 // console.log(finalname)
-
