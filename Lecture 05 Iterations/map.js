@@ -4,12 +4,11 @@ map.set('name', 'abhay')
 map.set('country', 'india')
 map.set('lang','hindi')
 
-console.log(map.has('abhay'))
+// console.log(map.has('abhay'))
 
-console.log(map.values())
+// console.log(map.values())
 
-console.log(map.get('name','name'))
-
+console.log(map.get('lang'))
 
 
 const tryObj = {
