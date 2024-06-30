@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="counter()">Click Me</button>
+    <button onclick="reset()">Reset</button>
+    <p id="number">0</p>
+</body>
+
+<script>
+let pp = document.querySelector('#number')
+
+
+let count =  0
+
+function counter() {
+    pp.innerHTML = ++count
+}
+
+const reset = () => {
+    count = 0
+    pp.innerHTML = count
+}
+
+</script>
+
+</html>
+    <!-- // function counter() {
+    //     pp.innerHTML = ++count
+    //     console.log(count)
+    
+    // } -->

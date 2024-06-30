@@ -47,6 +47,9 @@ const shoppingCart = [
 ]
 
 
+p2p = shoppingCart.reduce( (acc, item) => (acc + item.p), 0)
+console.log(p2p)
+
 const priceToPay = shoppingCart.reduce( (acc, item) => (acc + item.price),0 )
 // console.log(priceToPay);
 
