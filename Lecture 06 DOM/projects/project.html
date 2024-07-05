@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #212121;
+        color: #ffffff;
+      }
+      h1{
+        text-align: center;
+        margin-top: 100px;
+        margin-bottom: -140px;
+      }
+      span {
+        color: #fee3ff;
+        font-size: 20px;
+        font-weight: 400;
+      }
+      #wrapper {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100vh;
+        margin-bottom: -10rem;
+      }
+      #reset-button{
+        display: grid;
+        place-items: center;
+      }
+      button{
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        border: 2px solid pink;
+      }
+
+      .box {
+        display: grid;
+        place-content: center;
+        width: 100px;
+        height: 100px;
+        /* cursor: pointer; */
+        border-radius: 12px;
+        border: 2px solid white;
+      }
+      #red {
+        background-color: rgb(179, 51, 51);
+      }
+      #blue {
+        background-color: rgb(57, 57, 193);
+      }
+      #green {
+        background-color: rgb(46, 172, 46);
+      }
+      #yellow {
+        background-color: rgb(191, 191, 62);
+      }
+    </style>
+  </head>
+  <body>
+      <h1>COLOR SWITCHER</h1>
+      <div id="wrapper">
+      <span class="box" id="red">RED</span>
+      <span class="box" id="blue">BLUE</span>
+      <span class="box" id="green">GREEN</span>
+      <span class="box" id="yellow">YELLOW</span>
+    </div>
+    <div id="reset-button">
+      <button>RESET</button>
+    </div>
+  </body>
+  <script>
+    let body = document.querySelector("body");
+    let boxes = document.querySelectorAll(".box");
+    boxes.forEach((box) => {
+        console.log(boxes)
+      box.addEventListener("click", function (e) {
+        // console.log(e)
+        // console.log(e.target)
+        switch (e.target.id) {
+          case "red":
+            body.style.backgroundColor = e.target.id;
+            break;
+          case "blue":
+            body.style.backgroundColor = e.target.id;
+            break;
+          case "green":
+            body.style.backgroundColor = "green";
+            break;
+          case "yellow":
+            body.style.backgroundColor = "yellow";
+            break;
+          default:
+            break;
+        }
+      });
+    });
+    let resetbutton = document.querySelector("button");
+    resetbutton.addEventListener("click", function() {
+        body.style.backgroundColor = "#212121";
+    });
+  </script>
+</html>
+
+
+
+<!-- NOTE
+
+    e.target: Refers to the element that triggered the event (button in this case). 
+ 
+-->
