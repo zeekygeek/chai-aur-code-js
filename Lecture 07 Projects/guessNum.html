@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <input id="display" type="text" />
+    </div>
+    <button>SUBMIT</button>
+    <div id="reg-num"></div>
+    <div id="attempts">
+      <p>Remaining attempts : 3</p>
+      <p id="mssg"></p>
+    </div>
+
+    <script>
+      const wrapper = document.querySelector(".wrapper");
+      const display = document.getElementById("display");
+      const submitBtn = document.querySelector("button");
+      const regNum = document.getElementById("reg-num");
+      const mssg = document.getElementById("mssg");
+      const p = document.querySelector("p");
+
+      let randomNum = Math.round(Math.random() * 100);
+      console.log(randomNum);
+
+      let attempts = 3;
+
+      let entries = [];
+
+      let isPlayable = true;
+      if (isPlayable) {
+
+        submitBtn.addEventListener("click", (e) => {
+          if (
+            isNaN(display.value) ||
+            display.value > 100 ||
+            display.value < 0
+          ) {
+            mssg.innerHTML = "Invalid Input";
+            e.preventDefault();
+          } else if (attempts < 1) {
+            mssg.innerHTML = "Game Over, no attempts left";
+            p.innerHTML = `Remaining attempts : 0`;
+          } else if (display.value == "") {
+            mssg.innerHTML = "Give an input";
+          } else {
+            entries.push(display.value),
+              // console.log(display.value),
+              result(),
+              displayEntries(),
+              cleardisplay(),
+              showRemainingAttempts();
+            // console.log('clicked')
+          }
+        });
+
+        //   =============================================
+        function displayEntries() {
+          regNum.innerHTML = entries;
+        }
+
+        function cleardisplay() {
+          display.value = "";
+        }
+
+        function showRemainingAttempts() {
+          attempts--;
+          p.innerHTML = `Remaining attempts : ${attempts}`;
+        }
+      }
+      else{
+        mssg.innerHTML = "Game Over, no more attempts left";
+        p.innerHTML = `Remaining attempts : 0`;
+      }
+      function result() {
+        const userValue = Number(display.value);
+        if (userValue == randomNum) {
+          mssg.innerHTML = "Congratulations, You Won!";
+          isPlayable = false;
+        } else if (userValue < randomNum) {
+          mssg.innerHTML = "Too Low!";
+        } else {
+          mssg.innerHTML = "Too High!";
+        }
+      }
+    </script>
+  </body>
+</html>
