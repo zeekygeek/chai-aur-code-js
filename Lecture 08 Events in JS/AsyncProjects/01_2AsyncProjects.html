@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur JavaScript</h1>    
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <button id="clear">Clear</button>
+</body>
+<script>
+    // setTimeout
+    function sayName() {
+        console.log("hello USER")
+    }
+    // setTimeout(sayName, 2000)
+
+    // setTimeout( () => (console.log('ffsf')), 1000 )
+
+
+    //==============================
+    // setInterval
+    function myName() {
+        let anyNumber = Math.floor(Math.random()*100)
+        p = document.createElement('p')
+        // p.innerHTML = ('my name is KHAN' + ' ' + anyNumber)
+        p.innerHTML = (`my name is KHAN ${anyNumber}`)
+        document.body.appendChild(p)
+        console.log('my name is KHAN', anyNumber)
+    }
+
+    // setInterval(myName, 1000)
+    // setInterval( () => (console.log('hhh', Date.now())), 1000)
+
+
+    let start = document.getElementById('start')
+    let stop = document.getElementById('stop')
+    let clear = document.getElementById('clear')
+    let toClear;
+
+    start.addEventListener('click', function(){
+        console.log('started')
+        toClear = setInterval(myName, 1000)
+    })
+
+    stop.addEventListener('click', () => {
+        console.log('stopped')
+        clearInterval(toClear)
+    })
+
+    clear.addEventListener('click', () => {
+        let p = document.querySelectorAll('p')
+        p.forEach((el) => {
+            el.remove()
+        })
+    })
+</script>
+</html>         
