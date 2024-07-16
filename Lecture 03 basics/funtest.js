@@ -29,12 +29,19 @@
 
 
 // NUMBER SQUARE TABLE 
-for (let i = 0; i <= 100; i++) {
-    for (let j = 0; j <= 100; j++) {
-        if(i != j){
-            continue
-        }
-        console.log(`${i} * ${j} = ${i*j}`)
-        // console.log(`${i} ^ 2 = ${i*j}`)
-    }
+// for (let i = 0; i <= 100; i++) {
+//     for (let j = 0; j <= 100; j++) {
+//         if(i != j){
+//             continue
+//         }
+//         console.log(`${i} * ${j} = ${i*j}`)
+//         // console.log(`${i} ^ 2 = ${i*j}`)
+//     }
+// }
+
+
+chai = (username) => {
+    console.log(`Hello, Mr. ${username}`)
 }
+
+chai('John')
