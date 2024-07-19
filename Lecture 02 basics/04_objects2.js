@@ -57,3 +57,5 @@ console.log(Object.entries(Obj2))
 
 console.log(Obj2.hasOwnProperty(8))
 
+
+// Note :: objectname['key'] => value of that key
